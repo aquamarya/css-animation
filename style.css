@@ -127,7 +127,6 @@ html, body {
 
 .leaf:nth-child(even) {
     left: -150%;
-    /*left: -300%;*/
 
     transform-origin: 50% 100%;
     animation-name: leaf-even-grow;
@@ -176,3 +175,50 @@ html, body {
 
 /*    animation-delay: 0.5s;*/
 /*}*/
+
+.petal {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    margin: -16px 4px;
+    background: lightpink;
+    border-radius: 100% 0;
+    box-shadow: -16px 16px lightpink;
+
+    transform-origin: 0% 100%;
+    animation-name: leaf-odd-grow;
+    animation-duration: 8s;
+    animation-fill-mode: both;
+}
+
+.petal:before,
+.petal:after {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px
+}
+
+.petal:before {
+    position: absolute;
+    left: -20px;
+    top: 7px;
+    /*margin: 2px 6px;*/
+    background: lightpink;
+    border-radius: 0 100%;
+    box-shadow: 16px 16px lightpink;
+    transform: rotate(-30deg);
+    transform-origin: 5px 5px;
+}
+
+.petal:after {
+    position: absolute;
+    left: -8px;
+    top: -4px;
+    /*margin: 2px 6px;*/
+    background: lightpink;
+    border-radius: 0 100%;
+    box-shadow: 16px 16px lightpink;
+    transform: rotate(30deg);
+    transform-origin: 5px 5px;
+}
